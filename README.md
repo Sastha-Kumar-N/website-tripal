@@ -14,17 +14,17 @@ Bash script to install and setup a basic working tripal website.
 Execute the following commands one by one from a terminal:
 ```bash
 sudo apt update && sudo apt install git -y
-git clone https://github.com/shreyas-a-s/website-tripal.git
-cd website-tripal/
+git clone https://github.com/shreyas-a-s/oneclick-website-deployer.git
+cd oneclick-website-deployer/
 ./install.sh
 ```
 OR use this single line command from a terminal:
 ```bash
-sudo apt update && sudo apt install git -y && git clone https://github.com/shreyas-a-s/website-tripal.git && cd website-tripal/ && ./install.sh
+sudo apt update && sudo apt install git -y && git clone https://github.com/shreyas-a-s/oneclick-website-deployer.git && cd oneclick-website-deployer/ && ./install.sh
 ```
 OR if you want the simplest way:
 ```
-Just right click the one-click.sh file and click "Run as a Program" and follow the prompts.
+Go to Releases section. Download deployer.zip from latest release. Extract it. Right click the install.sh file and click "Run as a Program" and follow the prompts.
 ```
 >  NOTE: In some systems, right click menu might not have this option. In that case, just double click the file and select "Run in Terminal".
 
