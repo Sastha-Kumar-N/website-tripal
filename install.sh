@@ -120,9 +120,9 @@ while true; do
     "\n         Choose which website components to install\
     \n           (ARROW KEYS to move, SPACE to select,\
     \n      TAB to move between sections, ENTER to confirm):" 14 64 4 \
-    "Webform" "[Drupal module used to create Forms]" OFF \
-    "Tripal Blast" "[Interface for using NCBI Blast+]" OFF \
-    "Tripal JBrowse" "[Integrate GMOD JBrowse with Tripal]" OFF \
+    "Webform" "[Drupal module used to create Forms]" ON \
+    "Tripal Blast" "[Interface for using NCBI Blast+]" ON \
+    "Tripal JBrowse" "[Integrate GMOD JBrowse with Tripal]" ON \
     3>&1 1>&2 2>&3)
   exitstatus=$?
   if [ $exitstatus = 1 ]; then
@@ -168,9 +168,6 @@ if [[ -n $website_components ]]; then # Install tripal extensions based on user 
   [[ $website_components == *"Tripal Blast"* ]]   &&  ./scripts/install-tripal-blast.sh && ./scripts/setup-sample-blast-db.sh
   [[ $website_components == *"Tripal JBrowse"* ]] &&  ./scripts/install-jbrowse.sh && ./scripts/install-tripal-jbrowse.sh
 fi
-
-# Unset PGPASSWORD
-unset PGPASSWORD
 
 # Provide users the option for an automatic system reboot
 ./scripts/auto-system-reboot.sh
